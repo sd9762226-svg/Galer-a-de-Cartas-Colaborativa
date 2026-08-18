@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #001133;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.gd-header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffff, 3px 3px 0px #000;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+}
+
+/* Galería Grid */
+.gallery-container {
+  display: grid;
+  /* columnas más grandes para que los elementos (cartas, imágenes) se vean más grandes */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: 1rem;
+}
+
+/* Estilos de la Carta */
+.gd-card {
+  background: #111122;
+  border: 6px solid #fff;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 12px 0px #000, 0 0 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 220px;
+}
+
+.gd-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 0px #000, 0 0 45px rgba(0, 255, 255, 0.45);
+}
+
+.card-inner {
+  background: linear-gradient(180deg, #1f1f3a 0%, #0d0d1a 100%);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.cube-id {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #8888aa;
+}
+
+.cube-image-wrapper {
+  /* hacer el contenedor más grande para destacar la imagen */
+  width: 260px;
+  height: 180px;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  border: 3px dashed rgba(255, 255, 255, 0.18);
+}
+
+.cube-img {
+  /* permitir que la imagen ocupe más espacio dentro del wrapper grande */
+  max-width: 98%;
+  max-height: 98%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+}
+
+.cube-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Estadísticas */
+.cube-stats {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+.stat .label { color: #ffcc00; }
+.stat .value { color: #fff; }
+
+/* Etiqueta de Rareza */
+.badge {
+  font-size: 0.85rem;
+  font-weight: 900;
+  padding: 5px 12px;
+  border-radius: 14px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  text-shadow: 1px 1px 0px #000;
+}
+
+/* Colores según rareza */
+.rarity-rare { border-color: #0088ff; }
+.rarity-rare .badge { background: #0088ff; }
+
+.rarity-epic { border-color: #a824ff; }
+.rarity-epic .badge { background: #a824ff; }
+
+.rarity-legendary { border-color: #ffaa00; }
+.rarity-legendary .badge { background: #ffaa00; }
+
+/* Footer decoration */
+.gd-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.footer-decor {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  height: 320px; /* mucho más grande */
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.18) 100%);
+  border-radius: 10px;
+}
+.footer-decor .wave {
+  display: block;
+  width: 100%;
+  height: 320px; /* ajustar al nuevo alto */
+}
+.footer-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  height: 40px;
+  background-image: radial-gradient(circle at 8% 50%, rgba(0,255,255,0.16) 14px, transparent 16px),
+                    radial-gradient(circle at 45% 30%, rgba(255,255,255,0.06) 10px, transparent 12px),
+                    radial-gradient(circle at 80% 60%, rgba(255,128,255,0.07) 11px, transparent 13px);
+  background-size: 320px 40px, 420px 40px, 360px 40px;
+  background-repeat: repeat-x;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* Añadir una sombra grande y un brillo para que la decoración destaque */
+.footer-decor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,102,153,0.06), rgba(0,0,0,0.0));
+  pointer-events: none;
+}
