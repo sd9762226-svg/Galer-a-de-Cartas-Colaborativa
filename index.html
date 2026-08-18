@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Cubos GD</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pusab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="gd-header">
+    <h1>Galería de cubos de Geometry Dash</h1>
+  </header>
+
+  <main class="gallery-container">
+    
+    <!-- CARTA 1: Con imagen del cubo -->
+    <article class="gd-card rarity-epic">
+      <div class="card-inner">
+        <span class="cube-id">#001</span>
+        <div class="cube-image-wrapper">
+          <img src="img/CuboOriginal.jpg" alt="Cubo predeterminado GD" class="cube-img">
+        </div>
+        <h2 class="cube-name">CUBO PREDETERMINADO</h2>
+        <div class="cube-stats">
+          <div class="stat"><span class="label">ORBES:</span> <span class="value">0</span></div>
+          <div class="stat"><span class="label">ESTRELLAS:</span> <span class="value">0</span></div>
+        </div>
+        <span class="badge">ÉPICO</span>
+      </div>
+    </article>
+
+    <!-- CARTA 2: Espacio para que agregues tu cubo -->
+    <article class="gd-card rarity-rare">
+      <div class="card-inner">
+        <span class="cube-id">#002</span>
+        <div class="cube-image-wrapper">
+          <!-- Reemplaza el src con la URL o ruta local de tu imagen -->
+          <img src="TU_IMAGEN_AQUI.png" alt="Cubo GD 2" class="cube-img">
+        </div>
+        <h2 class="cube-name">NOMBRE DEL CUBO 2</h2>
+        <div class="cube-stats">
+          <div class="stat"><span class="label">ORBES:</span> <span class="value">???</span></div>
+          <div class="stat"><span class="label">ESTRELLAS:</span> <span class="value">???</span></div>
+        </div>
+        <span class="badge">RARO</span>
+      </div>
+    </article>
+
+    <!-- CARTA 3: Espacio para que agregues tu cubo -->
+    <article class="gd-card rarity-legendary">
+      <div class="card-inner">
+        <span class="cube-id">#003</span>
+        <div class="cube-image-wrapper">
+          <!-- Reemplaza el src con la URL o ruta local de tu imagen -->
+          <img src="TU_IMAGEN_AQUI.png" alt="Cubo GD 3" class="cube-img">
+        </div>
+        <h2 class="cube-name">NOMBRE DEL CUBO 3</h2>
+        <div class="cube-stats">
+          <div class="stat"><span class="label">ORBES:</span> <span class="value">???</span></div>
+          <div class="stat"><span class="label">ESTRELLAS:</span> <span class="value">???</span></div>
+        </div>
+        <span class="badge">LEGENDARIO</span>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="gd-footer">
+    <div class="footer-decor">
+      <!-- SVG onda decorativa -->
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="wave" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0%" stop-color="#002244" />
+            <stop offset="100%" stop-color="#004477" />
+          </linearGradient>
+        </defs>
+        <path d="M0,0 C300,80 900,0 1200,60 L1200,120 L0,120 Z" fill="url(#g1)" />
+      </svg>
+      <div class="footer-dots" aria-hidden="true"></div>
+    </div>
+  </footer>
+
+</body>
+</html>
