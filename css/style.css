@@ -146,6 +146,9 @@ body {
 .rarity-legendary { border-color: #ffaa00; }
 .rarity-legendary .badge { background: #ffaa00; }
 
+.rarity-common { border-color: #00ff88; }
+.rarity-common .badge { background: #00ff88; }
+
 /* Footer decoration */
 .contributors-box {
   width: 100%;
